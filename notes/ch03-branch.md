@@ -18,4 +18,19 @@
 ## 명령어
 - `git branch`: 존재하는 branch 확인 명령어
 - `git branch {branch-name}`: branch를 생성하는 명령어
+    - opt
+        - `--merged`
+        - `--no-merged`
+        - `-d`
+        - `-D`: **브랜치 삭제 강제 옵션**
 - `git checkout {branch-name}`: HEAD를 지정한 브랜치로 이동시키는 명령어.
+    - opt
+        - `-b`: `git branch {branch-name}` + `git checkout {branch-name}`을 할 수 있음
+- `git remote`
+    - opt
+        - `add`
+        - `-v`
+        - `show`
+- `git fetch`
+
+## 협업 과정

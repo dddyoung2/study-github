@@ -16,5 +16,6 @@
     - `feat/user-admin` 브랜치에서 작업 중이면 HEAD -> `feat/user-admin`
 
 ## 명령어
+- `git branch`: 존재하는 branch 확인 명령어
 - `git branch {branch-name}`: branch를 생성하는 명령어
 - `git checkout {branch-name}`: HEAD를 지정한 브랜치로 이동시키는 명령어.

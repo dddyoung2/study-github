@@ -1,0 +1,11 @@
+# Python File
+*.pt
+__pycache__/
+__pycache__
+
+# 확장자 무시
+*.ou
+*.o
+
+# 중요파일 무시
+*.env

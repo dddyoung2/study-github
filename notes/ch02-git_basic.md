@@ -46,5 +46,15 @@
         - `-d`: tag 제거
     - 체크섬을 이용해 나중에 태깅해도 됨
     - `git show {tag-name}`을 이용해 해당 태그의 정보를 볼 수 있음
-- `git rm`
-
+- `git rm {file-name}`: Git으로부터 더 이상 추적되지 않으며, 해당 디렉터리의 명령어 **대상이었던 파일은 삭제됨**
+    - opt: `--cached`: opt을 주면, 해당 디렉터리의 명령어 **대상이었던 파일은 삭제되지 않고 보존됨**  
+    *즉, 추적되면 안될 파일들을 실수로 넣은 경우에 사용함. 따라서, 이 옵션을 쓰는 경우 `.gitignore`를 사용할 것을 염두에 둬야 함.*  
+    - 공통적으로 이 명령어 후 staged 상태가 되므로 적용을 원하면 commit 해야 함
+- `git mv {file_from} {file_to}`: `{file_from}`에서 `{file_to}`로 파일명 변경
+    - `git mv`명령어를 쓰지 않으면 다음과 동일한 행동을 해야함  
+    ``` bash
+    mv {file_from} {file_to}
+    rm {file_from}
+    git add {file_to}
+    ```  
+    - 파일명을 바꾸는 순간 git에서는 두 가지 파일로 분리 인식함. 기존 것은 삭제된 상태로, 바뀐 것은 Unstaged 상태로 기록 됨.

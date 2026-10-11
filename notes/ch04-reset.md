@@ -21,6 +21,9 @@
     - `--hard {checksum|HEAD-pointer}`: HEAD 이동  
     지정한 지점으로 HEAD 포인터를 이동시켜 즉, 그 당시로 돌아감. 다만, 돌아가면서 업데이트된 **물리적 기록들도 같이 돌아가 사라짐.**
     - `{file-name}`: staged 상태인 대상 파일을 unstaged 상태로 끌어내림
-    - `{checksum|HEAD-pointer} {file-name}`: 
+    - `{checksum|HEAD-pointer} {file-name}`: 지정한 체크섬이나 헤드포인터로 지정 파일의 내용을 불러옴. 불러와서 바꾸지는 않고, staged상태로 남아있음.  
+    `git diff --staged`로 무슨변화가 있는지 비교 및 확인가능. 이후 `git commit -m "{commit-message}"`로 저장하고, `git reset --hard HEAD`로 적용.
 
-- `git checkout`: 
+- `git checkout [branch-name|checksum] {file-name}`: 브랜치 이름이나 체크섬을 별도 지정하지 않았다면, 지정한 파일을 이전 부모의 버전으로 회귀시킴. 즉, 지정 파일에 대해서만 `git reset --hard HEAD~` 하는 셈.  
+만약, 브랜치 이름이나 체크섬을 별도 지정하였다면, 지정한 브랜치에 있는 내용이나 지정한 체크섬에 있는 내용을 불러와 적용시킴.  
+만약, 불러올 곳에 동일 파일이 없다면, 명령 거부. 

@@ -20,6 +20,7 @@
     대대적 수정이 필요하거나, `git add .`을 실수로 사용하여 과하게 staged 시켰을 때 사용
     - `--hard {checksum|HEAD-pointer}`: HEAD 이동  
     지정한 지점으로 HEAD 포인터를 이동시켜 즉, 그 당시로 돌아감. 다만, 돌아가면서 업데이트된 **물리적 기록들도 같이 돌아가 사라짐.**
-    - `{file-name}`  
+    - `{file-name}`: staged 상태인 대상 파일을 unstaged 상태로 끌어내림
+    - `{checksum|HEAD-pointer} {file-name}`: 
 
-- `git checkout`
+- `git checkout`: 

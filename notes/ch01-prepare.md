@@ -13,8 +13,9 @@ git config --global core.editor vim
 ## 깃허브  프로젝트를 로컬로 복제하기
 먼저, 복제할 깃허브 프로젝트의 URL을 복사한다.
 ![캡처1](https://github.com/user-attachments/assets/3d1740ee-73c3-43ce-9fd1-66240eb29924)
-
-`git clone {repo-URL}`
+  
+`git clone {repo-URL}`을 수행한다.
+- opt `-o`: 리모트 저장소 이름을 지정 가능함 
 
 ## 복제 확인하기
 ```bash
